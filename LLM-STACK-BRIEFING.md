@@ -1,6 +1,6 @@
 Account login: HeziLiu, starred repos: 6
 
-# LLM Radar — Running &amp; Serving LLMs on Our Own Hardware (Stack Briefing)
+# LLM Radar — Running & Serving LLMs on Our Own Hardware (Stack Briefing)
 
 A short, pointable briefing on the current go-to open-source projects for running and serving large language models locally, cross-referenced against the repositories I currently star on GitHub. Starred data was pulled fresh from the GitHub API on 2026-10-21; project statuses come from web searches plus GitHub release lookups.
 
@@ -56,5 +56,5 @@ The starred-repository lookup returned **6 repositories**, listed below. The fiv
 ## Method
 
 - **Starred list:** GitHub API `list_starred_repositories` for account `HeziLiu`, sorted by star date descending — 6 repositories returned; pagination was verified to be exhausted (no further pages).
-- **Picks &amp; statuses:** Google web searches via serp-search, plus GitHub latest-release lookups per project (llama.cpp under `ggml-org`, Ollama, vLLM, SGLang, LocalAI, and TGI for the exclusion note).
+- **Picks & statuses:** Google web searches via serp-search, plus GitHub latest-release lookups per project (llama.cpp under `ggml-org`, Ollama, vLLM, SGLang, LocalAI, and TGI for the exclusion note).
 - **Starred-repo checks:** Google web searches for the five most recently starred repositories, corroborated with GitHub release/metadata lookups.
