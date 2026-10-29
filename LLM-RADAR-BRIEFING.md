@@ -11,8 +11,8 @@ Hosting note: where this briefing lives — creating a `llm-radar` repo directly
 Five recommended projects, in rough terms of what each is best for:
 
 1. **vLLM** (github.com/vllm-project/vllm) — high-throughput, memory-efficient LLM inference and serving engine with PagedAttention and continuous batching; the default production-serving engine on a GPU.
-   Latest release / maintenance: latest stable **v0.32.0**, published ~2026-10-18 (docs.vllm.ai and release trackers agree), on the ~2-week release cadence (v0.30.0 2026-09-22, v0.31.0 2026-10-05) with hundreds of commits per release; actively maintained.
-   Already starred? **No.** ({Pair with SGLang for agent / structured-output workloads.})
+   Latest release / maintenance: latest stable **v0.32.0**, published ~2026-10-18 (docs.vllm.ai and release trackers agree), on the ~2-week release cadence (v0.30.0 2026-09-22, v0.31.0 2026-10-05) with hundreds of commits per release; actively maintained. Pair with SGLang for agent / structured-output workloads.
+   Already starred? **No.**
 
 2. **Ollama** (github.com/ollama/ollama) — the developer-first local-LLM runtime: one-command model pulls, an OpenAI-compatible HTTP API, and a desktop app; bundles llama.cpp underneath.
    Latest release / maintenance: releases kept running through 2026 in the late-0.3x line (v0.31.2 released 2026-07-06; v0.30.8 2026-06-12; dependency bumps to v0.32.5 surfaced late Oct 2026); actively maintained, though releases are verbose / QA-style.
