@@ -2,43 +2,41 @@ Account login: HeziLiu, starred repos: 6
 
 # Local LLM Stack Radar — Briefing
 
-Artifact for the team briefing on running and serving large language models on your own hardware.
+Artifact for the team briefing on running and serving large language models on your own hardware. Folds together two lookups: a starred-repository list from the account, and the current open-source landscape of inference engines, serving frameworks and local runtimes (one entry per project with latest release / maintenance status, and whether you already star it).
 
-It folds together two lookups: a starred-repository list from the account (with a freshness/maintenance note on the five most recently starred repos) and the current open-source landscape of inference engines, serving frameworks and local runtimes (one entry per project with latest release / maintenance status, and whether you already star it).
-
-Generated from the starred-lookup and follow-up web searches.
+Generated from the starred lookup, fresh GitHub-API release lookups, and web follow-ups.
 
 ## Top picks
 
-1. **vLLM** (vllm-project/vllm) — High-throughput GPU inference and serving engine for LLMs; the production-serving reference for large models on a GPU.
-   Latest release / maintenance: v0.27.0 released 2026-08-10 (DeepSeek V4, Kimi K3 and Qwen3.5 support, PyTorch 2.13 upgrade, Model Runner V2 now covering non-generative tasks); multiple releases and daily CI, so actively maintained.
-   Already starred? **No.**
+1. **vLLM (vllm-project/vllm)** — High-throughput GPU inference and serving engine for LLMs; the production-serving reference for large models on a GPU.
+   Latest release / maintenance: **v0.32.0** (latest release, 814 commits from 363 contributors); continues DeepSeek V4 day-0 support and ships CUDA 13.0 / ROCm / XPU wheels, with docs pages reaching up to v0.31.0 in October 2026. Very actively maintained.
+   Already starred: **No.** (not in the lookup list)
 
-2. **Ollama** (ollama/ollama) — One-command local-LLM runtime with an OpenAI-compatible API; the mainstream developer-first local stack.
-   Latest release / maintenance: install artifacts dated 2026-10-21 along a rolling v0.3.x series; actively released, but mostly beta-style QA versions rather than canonical pairs.
-   Already starred? **No.**
+2. **llama.cpp (ggml-org/llama.cpp)** — C/C++ LLM inference engine for CPU and Apple Silicon (and GPU); foundation behind many local runtimes and the raw base of GPU serving projects.
+   Latest release / maintenance: **v0.8.0**, shipping the LiquidAI LFM3 pack (LFM3-1.7B text, LFM3-VL-2B vision, LFM3-Audio-2B/TTS) with new streaming-audio API; releases continue at the front line (every-negative-merge cadence), and the canonical ggml-org repo keeps shipping while the osllm/llama.cpp fork went read-only in February 2026.
+   Already starred: **No.** (not in the lookup list)
 
-3. **llama.cpp** (ggml-org/llama.cpp) — C/C++ LLM inference engine for CPU and Apple Silicon; the foundation behind many local runtimes and the raw base of several GPU serving projects.
-   Latest release / maintenance: releases continue at the front line (~1,000 releases since mid-2023, 5,000+ commits); note the osllmai/llama.cpp fork was frozen (read-only) on 2026-02-04, while the canonical ggml-org repo keeps shipping.
-   Already starred? **No.**
+3. **Ollama (ollama/ollama)** — One-command local-LLM runtime with an OpenAI-compatible API; the mainstream developer-first local stack.
+   Latest release / maintenance: **v0.40.13** (published 2026-10-28), with the entire LiquidAI LFM3 family now runnable on Linux and Windows alongside Apple silicon; fixed issues landed consistently through Q4 2026.
+   Already starred: **No.** (not in the lookup list)
 
-4. **SGLang** (sgl-project/sglang) — High-performance serving framework with day-0 support for the latest open models, including structured-output / JSON generation.
-   Latest release / maintenance: the v0.5.x line remains current (external release trackers show releases through at least v0.5.17), with an active community design discussion around the serving HTTP layer; actively maintained.
-   Already starred? **No.**
+4. **SGLang (sgl-project/sglang)** — High-performance serving framework with day-0 support for the latest open models, structured-output / JSON generation, and multiclient serving.
+   Latest release / maintenance: **v0.5.22** (950 PRs from 245 contributors); CUDA 13 + PyTorch 2.11 handling, DSpark / HiSparse speculation, instant mmap loading, and the highest-tier support moved from **Apple Silicon Macs with the standard PyTorch backend alongside MLX**.
+   Already starred: **No.** (not in the lookup list)
 
-5. **Text Generation WebUI** (oobabooga/textgen) — Classic open-source web front-end for loading and running locally loaded open models (ingest, management, run prompts).
-   Latest release / maintenance: last real release cycle was around 2023; forks, notably vanilla-UI and BigPhenom, still carry the UI; known long-outstanding Windows-installer issues date to Oct 2023.
-   Already starred? **No.**
+5. **TensorRT-LLM (NVIDIA/TensorRT-LLM)** — NVIDIA's high-performance inference engine for NVIDIA GPUs; deepest raw performance tuning per GPU with CUDA graph support and custom kernels.
+   Latest release / maintenance: **v1.2.1** (released 2026-04-20, fixed an NV-cache corruption issue and bumped xgrammar / flashinfer); a vendor roadmap was announced in August 2025, NVIDIA standalone release images still ship for Darwin / Linux / Windows, and regular bug-fix cycles (e.g., the 0.20.x RTX / vLLM bridge line in June 2026) keep the track active.
+   Already starred: **No.** (not in the lookup list)
 
-## Cross-reference with my starred list
+## Cross-reference with your starred list
 
-None of the five top picks appear in the starred list — every one reads "already starred? No". The closest security to "already following" is zero. For a team serving stack, Ollama + llama.cpp cover the CPU side while vLLM or SGLang serve the GPU side.
+None of the five top picks appear in the starred list — you do not currently follow any of them. For a team stack, Ollama + llama.cpp cover the CPU side while vLLM or SGLang serve the GPU side; TensorRT-LLM is the NVIDIA-hardware-flavoured option if raw on-GPU perf wins out.
 
-## Currently starred — every repository the lookup returned (6 total, newest starred first)
+## Currently starred — every repository the lookup returned (6 total, newest-starred first)
 
-- **OpenBMB/AgentCPM** — repo metadata still current at lookup time (2026-10-29 scan); CI and README workflow still live, and the parent-ecosystem activity is still rolling → not stale.
-- **PaddlePaddle/ERNIE** — actively developed: ERNIE 4.5 variants still ship (e.g. ERNIE-4.5-21B-A3B-Paddle, published 2025-12-23), with FastDeploy submitting PRs validating inference across platforms → actively maintained.
-- **FudanNLP/fastNLP** — lowest signal found in web lookups; the repo itself flags it as "Currently still in incubation", so treat as dormant-ish research tooling rather than a runtime → not maintained.
-- **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — 2017 Hung-yi Lee machine-learning course homework archive; nothing meaningful changed recently (no recent activity surfaced, only forks) → not maintained.
-- **fighting41love/funNLP** — edited description still advertises the giant Chinese/English NLP resource kit, but the list is stale to the point of disconnection → not actively maintained.
-- **996icu/996.ICU** — dormant: last commit 2019-04-04; no code for years; purely awareness-preserving (open repo, still faced with massive positive star counts) → no maintained project.
+- **OpenBMB/AgentCPM** — Still actively maintained: latest commit 2026-10-22 ("fix AgentDock security vulnerabilities"), and the AgentCPM ecosystem (AgentCPM-GUI, AgentCPM-Explore) is still rolling releases. ARC-AGI-weight models floated in reviews in 2026; not dormant.
+- **PaddlePaddle/ERNIE** — Maintained anchor, but quiet on the repo itself: ERNIE 4.5 was open-sourced June 2025 with a large family (including ERNIE-4.5-VL, ERNIEKit, FastDeploy 2.0 adding OpenAI-compatible inference); however the repo's last merged commit is only 2025-12-26 and the default branch is release/v1.5.
+- **FudanNLP/fastNLP** — Dormant: the repo states "Currently still in incubation", and its last real change was elasticbert feature merge in December 2022 with no activity since.
+- **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — Course artifact archive from 2017: last commit "hw4 description" on March 15, 2019 and nothing meaningful in years.
+- **fighting41love/funNLP** — Lazy maintenance: last commit August 24, 2023 (README note about OpenCompass); after 84k+ stars the repo has slowed to no observably recent improvements.
+- **996icu/996.ICU** — Awareness repo, dormant: last commit April 2021; fully open with massive star counts, but there's no maintained project behind it.
