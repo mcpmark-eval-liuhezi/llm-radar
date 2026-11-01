@@ -1,7 +1,9 @@
-# llm-radar
+# LLM Radar
 
-Endpoint to the team's go-to briefing on running and serving large language models locally.
+Briefing on open-source projects for running and serving large language models on own hardware, cross-referenced with the author's GitHub starred repositories.
 
-## What this contains
+- Account login: HeziLiu
+- Starred repos: 6
+- Top picks: llama.cpp, vLLM, Ollama, LM Studio, TGI
 
-- **[LLM-SERVING-BRIEFING.md](LLM-SERVING-BRIEFING.md)** — Local LLM stack briefing: five top open-source projects (llama.cpp, Ollama, vLLM, SGLang, LM Studio) with latest release / maintenance status, cross-referenced against the GitHub starred-repository list for this account.
+Full briefing: [LLM-RADAR-BRIEFING.md](LLM-RADAR-BRIEFING.md)
