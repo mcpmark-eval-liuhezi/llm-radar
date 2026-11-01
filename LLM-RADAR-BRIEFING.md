@@ -1,27 +1,30 @@
 Account login: HeziLiu, starred repos: 6
 
-# LLM Radar — Local LLM Stack Briefing
+# LLM Radar Briefing
 
-A short briefing on the current go-to open-source projects for running and serving large language models on your own hardware (inference engines, serving frameworks, and local runtimes), cross-referenced against the author's currently starred GitHub repositories.
+Short briefing on the current go-to open-source projects for running and serving large language models on local hardware, cross-referenced against the account's starred-repository list.
 
 ## Top picks
 
-1. **llama.cpp** — Purpose: minimal-setup, high-performance LLM inference engine for local hardware (CPU, CUDA, Vulkan, Metal, ...) using the GGUF model format. Latest release / maintenance: actively maintained under ggml-org; 165+ releases tracked with frequent cadence and recent container images (server-cuda12-b10830); latest precise tag not pinned by search but clearly active. Already star it: No.
-2. **vLLM** — Purpose: high-throughput, memory-efficient LLM inference and serving library built around PagedAttention. Latest release / maintenance: latest stable v0.32.0 (published Oct 18, 2026); regular ~2-week release cadence; actively maintained (v4.1 tracking issue open). Already star it: No.
-3. **Ollama** — Purpose: easy CLI/runtime for pulling and running local LLMs with a simple REST API on your own machine. Latest release / maintenance: v0.40.10 (Oct 23, 2026), with v0.40.11 adding macOS speech/text-to-speech during model runs; actively maintained. Already star it: No.
-4. **LM Studio** — Purpose: desktop GUI for discovering, downloading, and running local LLMs with an OpenAI-compatible server API. Latest release / maintenance: 0.4.24 changelog (Sep 9, 2026); active development with frequent releases; v0.4.0 noted in bug tracker (Feb 2026). Already star it: No.
-5. **Text Generation Inference (TGI)** — Purpose: Rust-based high-performance serving engine for deploying and serving transformer LLMs. Latest release / maintenance: upstream repository archived by owner on Mar 21, 2026; latest release v2.0.4; community fork maintained under OPA (Open Platform for AI) with public Helm chart tgi 1.4.0. Already star it: No.
+1. **llama.cpp** — C/C++ inference engine for running open-weight LLMs on CPU/GPU using GGML quantization; the de-facto lightweight local runtime. Latest release: v1.2 (March 2025); actively maintained under the ggml-org org with regular releases and container images. Already starred: No.
+2. **vLLM** — High-throughput LLM inference and serving engine featuring PagedAttention; the dominant server-side choice for transformer-based models. Actively maintained with frequent releases (1,800+ tagged releases); GPU recommended. Already starred: No.
+3. **Ollama** — Simple CLI/API for pulling and running open LLMs locally with a single command; ideal for quick local serving and experimentation. Latest ~0.14.3 (Oct 2025); actively maintained. Already starred: No.
+4. **LM Studio** — Desktop GUI for downloading, serving, and chatting with local LLMs; good for non-technical users. Active development (0.3.25 Build 2, Sep 2025); actively maintained. Already starred: No.
+5. **SGLang** — High-performance serving framework for LLMs and multimodal models; strong for structured generation and batched serving. Actively maintained; 2026 Q2 roadmap noted. Already starred: No.
+
+None of the five picks appear in the starred list, so none are already starred.
 
 ## Currently starred
 
-1. **OpenBMB/AgentCPM** — Actively maintained; end-to-end infrastructure for training and evaluating LLM agents; recent activity observed (repo updated Oct 2026).
-2. **PaddlePaddle/ERNIE** — Actively maintained; ERNIE 4.5 models and ERNIEKit industrial toolkit on PaddlePaddle; model releases via ModelArts (ERNIE-4.5-21B-A3B-Paddle updated Dec 2025).
-3. **FudanNLP/fastNLP** — Effectively dormant; description reads "Currently still in incubation"; no recent releases found in web search.
-4. **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — Stable archive of Hung-yi Lee's 2017 NLP course homework; not actively maintained.
-5. **fighting41love/funNLP** — Community-maintained Chinese/English NLP corpus and tools collection; forks still being updated (2025-2026); still maintained by the community.
-6. **996icu/996.ICU** — Still live (277k+ stars) but a cultural reference repo, not software-maintained.
+- **OpenBMB/AgentCPM** — Actively maintained; end-to-end infrastructure for training and evaluating LLM agents (~833 stars, 8 open issues, not archived, last updated 2026-10-30).
+- **PaddlePaddle/ERNIE** — Actively maintained by PaddlePaddle; official repository for ERNIE 4.5 and ERNIEKit, an industrial-grade toolkit based on PaddlePaddle (updated 2026-10-31).
+- **FudanNLP/fastNLP** — Described as "currently still in incubation"; modular, extensible NLP framework (~3.1k stars, 71 open issues, last updated 2026-10-30).
+- **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — Course homework archive for the 2017 Hung-yi Lee ML course at NTU; not actively maintained (~875 stars, 443 forks, last updated 2026-10-26).
+- **fighting41love/funNLP** — Large Chinese/English NLP resource and corpus collection; very recently updated (2026-11-01), still maintained (~84k stars, 15k forks).
+- **996icu/996.ICU** — Star-counting/protest repository for the 996 work schedule; largely inactive now (~277k stars, 20k forks, last updated 2026-11-01).
 
 ## Notes
 
-- Starred-repos lookup returned a total of 6 repositories; the five picks above are not among them, so none are already starred.
-- Web statuses are from search snippets and may lag; for production use, verify exact latest tags on each project's GitHub Releases page.
+- Starred-repo lookup returned a total of 6 repositories (sorted by dated created desc): OpenBMB/AgentCPM, PaddlePaddle/ERNIE, FudanNLP/fastNLP, maplezzz/NTU_ML2017_Hung-yi-Lee_HW, fighting41love/funNLP, 996icu/996.ICU.
+- Web checks for the five most recently starred repos confirm AgentCPM, ERNIE, and funNLP remain actively maintained; fastNLP is in incubation; the NTU homework repo is static course material.
+- For up-to-date release numbers,Always verify on the respective GitHub Releases pages before committing to a stack.
