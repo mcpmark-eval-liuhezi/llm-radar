@@ -1,4 +1,4 @@
-Account login: HeziLiu, starred reps: 6
+Account login: HeziLiu, starred repos: 6
 
 # LLM Local Stack Radar
 
