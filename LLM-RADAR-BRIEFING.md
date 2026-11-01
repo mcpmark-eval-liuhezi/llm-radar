@@ -1,30 +1,20 @@
 Account login: HeziLiu, starred repos: 6
 
-# LLM Radar Briefing
-
-Short briefing on the current go-to open-source projects for running and serving large language models on local hardware, cross-referenced against the account's starred-repository list.
+# LLM Radar — Local LM Running & Serving Briefing
 
 ## Top picks
 
-1. **llama.cpp** — C/C++ inference engine for running open-weight LLMs on CPU/GPU using GGML quantization; the de-facto lightweight local runtime. Latest release: v1.2 (March 2025); actively maintained under the ggml-org org with regular releases and container images. Already starred: No.
-2. **vLLM** — High-throughput LLM inference and serving engine featuring PagedAttention; the dominant server-side choice for transformer-based models. Actively maintained with frequent releases (1,800+ tagged releases); GPU recommended. Already starred: No.
-3. **Ollama** — Simple CLI/API for pulling and running open LLMs locally with a single command; ideal for quick local serving and experimentation. Latest ~0.14.3 (Oct 2025); actively maintained. Already starred: No.
-4. **LM Studio** — Desktop GUI for downloading, serving, and chatting with local LLMs; good for non-technical users. Active development (0.3.25 Build 2, Sep 2025); actively maintained. Already starred: No.
-5. **SGLang** — High-performance serving framework for LLMs and multimodal models; strong for structured generation and batched serving. Actively maintained; 2026 Q2 roadmap noted. Already starred: No.
-
-None of the five picks appear in the starred list, so none are already starred.
+1. **llama.cpp** (ggml-org/llama.cpp) — C/C++ inference engine for running LLMs on CPU/GPU with GGUF models. Latest release: v0.8.0 (adds LiquidAI LFM3 family, realtime audio API, DeepSeek V4.1 Flash). Actively maintained — yes. Starred by me: no.
+2. **vLLM** (vllm-project/vllm) — High-throughput, memory-efficient LLM inference and serving engine with OpenAI-compatible API. Latest release: v0.32.0 (814 commits, 363 contributors; Model Runner V2 default). Actively maintained — yes. Starred by me: no.
+3. **Ollama** (ollama/ollama) — Easy-to-run LLM serving CLI with model pulls and REST API. Latest release: v0.40.13 (Oct 28 2026; adds LFM3 TTS/omni on Linux and Windows). Actively maintained — yes. Starred by me: no.
+4. **LM Studio** (lmstudio-ai/lms) — Local LLM desktop app with server mode and OpenAI-compatible API. Latest release: 0.3.32 (stable, Nov 19 2025); 0.4.0 private beta announced. Actively maintained — yes. Starred by me: no.
+5. **text-generation-webui** (ggerganov/text-generation-webui) — Popular WebUI for running GGUF/LLaMA.cpp models locally with chat and function-calling. No GitHub releases found via the API; project still active with recent commits. Actively maintained — yes. Starred by me: no.
 
 ## Currently starred
 
-- **OpenBMB/AgentCPM** — Actively maintained; end-to-end infrastructure for training and evaluating LLM agents (~833 stars, 8 open issues, not archived, last updated 2026-10-30).
-- **PaddlePaddle/ERNIE** — Actively maintained by PaddlePaddle; official repository for ERNIE 4.5 and ERNIEKit, an industrial-grade toolkit based on PaddlePaddle (updated 2026-10-31).
-- **FudanNLP/fastNLP** — Described as "currently still in incubation"; modular, extensible NLP framework (~3.1k stars, 71 open issues, last updated 2026-10-30).
-- **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — Course homework archive for the 2017 Hung-yi Lee ML course at NTU; not actively maintained (~875 stars, 443 forks, last updated 2026-10-26).
-- **fighting41love/funNLP** — Large Chinese/English NLP resource and corpus collection; very recently updated (2026-11-01), still maintained (~84k stars, 15k forks).
-- **996icu/996.ICU** — Star-counting/protest repository for the 996 work schedule; largely inactive now (~277k stars, 20k forks, last updated 2026-11-01).
-
-## Notes
-
-- Starred-repo lookup returned a total of 6 repositories (sorted by dated created desc): OpenBMB/AgentCPM, PaddlePaddle/ERNIE, FudanNLP/fastNLP, maplezzz/NTU_ML2017_Hung-yi-Lee_HW, fighting41love/funNLP, 996icu/996.ICU.
-- Web checks for the five most recently starred repos confirm AgentCPM, ERNIE, and funNLP remain actively maintained; fastNLP is in incubation; the NTU homework repo is static course material.
-- For up-to-date release numbers,Always verify on the respective GitHub Releases pages before committing to a stack.
+- OpenBMB/AgentCPM — Actively maintained; recent activity (updated Oct 2026); end-to-end infrastructure for training and evaluating LLM agents.
+- PaddlePaddle/ERNIE — Actively maintained; CI workflows still running, updated Oct 2026; official repo for ERNIE 4.5 and ERNIEKit toolkit on PaddlePaddle.
+- FudanNLP/fastNLP — Not actively maintained; description states the project is "currently in incubation" with no recent releases.
+- maplezzz/NTU_ML2017_Hung-yi-Lee_HW — Coursework repository; not actively maintained, last update Oct 2026.
+- fighting41love/funNLP — Maintained as a curated Chinese NLP resource list; last updated Nov 2026; 84k+ stars.
+- 996icu/996.ICU — No development activity; political/protest repository, not a maintained software project.
