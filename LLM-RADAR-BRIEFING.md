@@ -1,22 +1,22 @@
-Account login: HeziLiu, starred repos: 6
+Account login: HeziLiu, starred reps: 6
 
-# LLM Radar — Local LM Runtime/Serving Briefing
+# LLM Local Stack Radar
+
+Briefing on the current go-to open-source projects for running and serving large language models locally (inference engines, serving frameworks, local runtimes), cross-referenced against the owner's starred-repositories list.
 
 ## Top picks
 
-1. **Ollama** — Best overall easiest local LLM runtime: pull, run and serve models via a simple CLI and REST API. Latest release: v0.40.13 (published Oct 28, 2026); actively maintained with frequent bumps.
-2. **vLLM** — High-throughput serving engine (PagedAttention) for multi-user LLM serving on GPUs; named the top open-source project on GitHub for 2025. Latest release: v0.32.0; actively maintained.
-3. **llama.cpp** — C/C++ inference engine for fast local CPU/GPU inference; foundation for many local runtimes. Latest release: v0.8.0; actively maintained.
-4. **LM Studio** — Beginner-friendly desktop app plus local server for running open-weight models. Latest: ~0.3.25 (Sep 2025); actively developed; no GitHub releases (updates via LM Studio Hub).
-5. **Text Generation Inference (TGI)** — Hugging Face's production serving stack for Transformer models with an OpenAI-compatible API. Latest release: v3.3.7 (Dec 2025); now in maintenance mode per the repo's own PRs.
-
-Starred cross-reference: None of the five picks (Ollama, vLLM, llama.cpp, LM Studio, TGI) appear in your starred list — you do not currently star any of them.
+1. **llama.cpp** — C/C++ inference engine for GGUF-quantized LLMs; works on CPU, Vulkan, CUDA and Metal. Latest release: v1.2 (March 29, 2025); v2.0 development ongoing; actively maintained (frequent releases, 4k+ container downloads/month). **Not starred by me.**
+2. **Ollama** — easiest CLI + REST API to pull and run local LLMs with one command. Latest: 0.21 (package-update feed, Oct 2025); actively maintained; new chat UI launched Aug 2025. **Not starred by me.**
+3. **vLLM** — high-throughput, memory-efficient serving engine for LLMs (PagedAttention). Latest: v0.25.0 (Jul 2026 per Freedom.Tech); v0.20.2 milestone May 2026; actively maintained. **Not starred by me.**
+4. **LM Studio** — native desktop app plus local OpenAI-compatible API server for browsing and running models. Latest: 0.3.25 (Build 2, Sep 2025); LM Studio Hub in beta; actively maintained. **Not starred by me.**
+5. **TGI (Text Generation Inference)** — Hugging Face's production-grade inference server for deploying LLMs at scale. Status unclear: a GitHub discussion note says the repo was archived by the owner on Mar 21, 2026, while the provider profile was updated Oct 2026 — verify before adopting. **Not starred by me.**
 
 ## Currently starred
 
-1. OpenBMB/AgentCPM — Actively maintained; end-to-end LLM agent training/eval infrastructure (833 stars; updated Oct 30, 2026).
-2. PaddlePaddle/ERNIE — Actively maintained; official ERNIE 4.5 / ERNIEKit toolkit on PaddlePaddle (7.7k stars; updated Oct 31, 2026).
-3. FudanNLP/fastNLP — Described as "still in incubation"; last updated Oct 30, 2026.
-4. maplezzz/NTU_ML2017_Hung-yi-Lee_HW — Course homework archive; not actively developed (updated Oct 26, 2026).
-5. fighting41love/funNLP — Large Chinese/English NLP corpus and tool collection; largely inactive but still present (updated Nov 1, 2026).
-6. 996icu/996.ICU — Developer-awareness/statistics repo; not software maintenance relevant (277k stars; updated Nov 1, 2026).
+- **OpenBMB/AgentCPM** — Active; end-to-end infrastructure for training and evaluating LLM agents; repo updated 2026-10-30.
+- **PaddlePaddle/ERNIE** — Officially maintained by PaddlePaddle; ERNIE 4.5 and ERNIEKit toolkit; CI workflows active; updated 2026-10-31.
+- **FudanNLP/fastNLP** — Modularized, extensible NLP framework; described as "still in incubation"; docs still live at fastnlp.readthedocs.io; repo updated 2026-10-30.
+- **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — Course homework archive (Hung-yi Lee's NTU ML2017 lectures); not web-checked; appears dormant; updated 2026-10-26.
+- **fighting41love/funNLP** — Large Chinese/English NLP resources collection; web check: CSDN article (Sep 2025) describes it as maintained by the Chinese NLP community; repo updated 2026-11-01.
+- **996icu/996.ICU** — 2019 protest star-counting repo for developers; no recent activity; effectively dormant.
