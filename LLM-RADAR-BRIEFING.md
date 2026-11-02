@@ -1,22 +1,28 @@
 Account login: HeziLiu, starred repos: 6
 
-# LLM Radar — Local LLM Inference & Serving Briefing
+# LLM Radar — Briefing
+
+Short briefing for the team picking a stack for running and serving large language models on own hardware.
 
 ## Top picks
 
-1. **llama.cpp** (ggml-org/llama.cpp) — Pure C/C++ inference engine with CPU/GPU/quantization support and an OpenAI-compatible server. Latest release v0.8.0 (target commitish 8642541b); actively maintained with frequent model-footer, MoE, and audio updates.
-2. **vLLM** (vllm-project/vLLM) — High-throughput LLM inference and serving engine using PagedAttention, with an OpenAI-compatible API. Latest v0.33.0 (PyTorch 2.14 / CUDA 13.0 wheels; CUDA 12.9 dropped); actively maintained.
-3. **Ollama** (ollama/ollama) — Simple CLI + background service for pulling and running LLMs locally with an OpenAI-compatible API. Latest v0.40.13 (published 2026-10-28), adding LFM3 models on Linux and Windows; actively maintained.
-4. **LM Studio** (lmstudio-ai/lm-studio) — Desktop GUI application for running and serving local LLMs with a built-in model library and local API server. GitHub Releases endpoint returns 404; official changelog latest 0.3.30 (Sep 2025) with 0.4 in development; actively maintained.
-5. **Triton Inference Server** (NVIDIA/triton-inference-server) — Cloud inferencing server optimized for CPUs and GPUs, with HTTP/gRPC frontends, model convergence, and many backends. Latest v2.73.0 (r26.09 / NGC 26.09, CUDA 13.0 build, C++20); actively maintained.
+1. **llama.cpp** (ggml-org/llama.cpp) — C/C++ inference engine for GGUF models; highly portable CPU/GPU inference. Latest release: v0.8.0 (recent release adding LFM3 audio models, realtime /v1/realtime API and /tts endpoint). Actively maintained.
+2. **vLLM** (vllm-project/vllm) — High-throughput, memory-efficient LLM inference and serving engine (PagedAttention). Latest release: v0.33.0 (Oct 2026; CUDA 13.0 wheels, ROCm 10.0 images). Actively maintained.
+3. **Ollama** (ollama/ollama) — Easy local LLM server/CLI wrapping llama.cpp with model受体 management. Latest release: v0.40.13 (published 2026-10-28; adds Liquid AI LFM3 family on Linux/Windows). Actively maintained.
+4. **SGLang** (sgl-project/sglang) — High-performance serving framework for LLMs and multimodal models, strong for structured output and PD disaggregation. Latest release: v0.5.22 (950 PRs, 245 contributors; Apple Silicon PyTorch backend). Actively maintained.
+5. **TGI / Text Generation Inference** (huggingface/text-generation-inference) — Hugging Face's production inference server for transformer models. Latest release: v3.3.7 (Dec 2025); repository archived on 2026-03-21 and placed in maintenance mode — last release v3.3.7, no active development since.
 
-None of the five picks (llama.cpp, vLLM, Ollama, LM Studio, Triton) are currently starred on the HeziLiu account.
+Star status: none of these five picks (llama.cpp, vLLM, Ollama, SGLang, TGI) appear in the starred-repositories list.
 
 ## Currently starred
 
-1. **OpenBMB/AgentCPM** — End-to-end infrastructure for training and evaluating LLM agents (Python; 834 stars). Web status: actively maintained, last updated 2026-11-02, 8 open issues.
-2. **PaddlePaddle/ERNIE** — Official repository for ERNIE 4.5 and ERNIEKit, the industrial-grade toolkit based on PaddlePaddle (Python; 7,740 stars). Web status: actively maintained, last updated 2026-11-01; ERNIE 4.5 models also available via FastDeploy/HF.
-3. **FudanNLP/fastNLP** — A modularized and extensible NLP framework, currently still in incubation (Python; 3,139 stars). Web status: last updated 2026-10-30; development sparse, described as still in incubation.
-4. **maplezzz/NTU_ML2017_Hung-yi-Lee_HW** — NTU ML2017 Spring/Fall homework repository (Jupyter Notebook; 875 stars). Web status: course material from the Hung-yi Lee ML course, last push ~2026-10-26; static course content.
-5. **fighting41love/funNLP** — Huge Chinese/English NLP resources collection (Python; 84,336 stars). Web status: last updated 2026-11-02 but content is a static consolidated resource list, effectively dormant.
-6. **996icu/996.ICU** — Repository for counting stars and contributing on the 2026 work-schedule protest (277,208 stars). Web status: static protest repo, not actively developed; last push 2026-11-02.
+Total starred repositories returned by the lookup: 6
+
+- 996icu/996.ICU — Stars-counting/protest repository; not LLM-related. Web check: static since ~2019, no major recent changes.
+- fighting41love/funNLP — Large Chinese/English NLP resources corpus; last updated 2026-11-02 per GitHub; dormant but no major restructuring recently.
+- maplezzz/NTU_ML2017_Hung-yi-Lee_HW — NTU ML2017 coursework homework repo; last updated 2026-10-26; no major recent changes, educational only.
+- FudanNLP/fastNLP — Modularized NLP framework described as "still in incubation"; last updated 2026-10-30; low recent activity.
+- PaddlePaddle/ERNIE — Official ERNIE 4.5 / ERNIEKit repo on PaddlePaddle; last updated 2026-11-01; active development (Baidu).
+- OpenBMB/AgentCPM — End-to-end infrastructure for training and evaluating LLM agents; last updated 2026-11-02; active.
+
+Five most-recently-starred web checks: OpenBMB/AgentCPM (active, updated 2026-11-02), PaddlePaddle/ERNIE (active, updated 2026-11-01), FudanNLP/fastNLP (low activity, updated 2026-10-30), maplezzz/NTU_ML2017_Hung-yi-Lee_HW (inactive coursework, 2026-10-26), fighting41love/funNLP (dormant resource dump, updated 2026-11-02).
